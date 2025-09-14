@@ -3,16 +3,16 @@
 const SONGS = [
  
   // Bollywood placeholders — add the media files to use these:
-  { name: "kalank", title: "Kalank", artist: "Arijit Singh" },
+  //{ name: "kalank", title: "Kalank", artist: "Arijit Singh" },
   { name: "kesariya", title: "Kesariya", artist: "Arijit Singh" },
   { name: "tum-hi-ho", title: "Tum Hi Ho", artist: "Arijit Singh" },
   { name: "diya-aur-baati-hum", title: "Diya Aur Baati Hum", artist: "Kailash Kher" },
   { name: "shish-navata-hu", title: "Shish Navata Hu", artist: "Jubin Nautiyal" },
-  { name: "apna-time-aayega", title: "Apna Time Aayega", artist: "Divine" },
+ // { name: "apna-time-aayega", title: "Apna Time Aayega", artist: "Divine" },
 
-  { name: "music-1", title: "Lotus Lane", artist: "The Loyalist" },
-  { name: "music-2", title: "Sappheiros", artist: "Aurora" },
-  { name: "music-3", title: "Walking Firiri", artist: "Gorkhali Takma" },
+ // { name: "music-1", title: "Lotus Lane", artist: "The Loyalist" },
+ // { name: "music-2", title: "Sappheiros", artist: "Aurora" },
+ // { name: "music-3", title: "Walking Firiri", artist: "Gorkhali Takma" },
 
 
 ];
@@ -236,3 +236,4 @@ if (Number.isFinite(saved.v)) {
   audio.volume = saved.v;
   volRange.value = saved.v;
 }
+
