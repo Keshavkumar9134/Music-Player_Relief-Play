@@ -10,7 +10,7 @@ const SONGS = [
   { name: "shish-navata-hu", title: "Shish Navata Hu", artist: "Jubin Nautiyal" },
  // { name: "apna-time-aayega", title: "Apna Time Aayega", artist: "Divine" },
 
- // { name: "music-1", title: "Lotus Lane", artist: "The Loyalist" },
+  { name: "music-1", title: "Lotus Lane", artist: "The Loyalist" },
  // { name: "music-2", title: "Sappheiros", artist: "Aurora" },
  // { name: "music-3", title: "Walking Firiri", artist: "Gorkhali Takma" },
 
@@ -236,4 +236,5 @@ if (Number.isFinite(saved.v)) {
   audio.volume = saved.v;
   volRange.value = saved.v;
 }
+
 
