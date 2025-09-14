@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relief Play</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Player -->
+    <section class="player" aria-label="Music player">
+      <header class="meta">
+        <h2 id="title">Lotus Lane</h2>
+        <h3 id="artist">The Loyalist</h3>
+      </header>
+
+      <div class="artwrap">
+        <img id="cover" src="images/thapa-1.jpg" alt="Song cover" />
+        <button class="fav" id="favBtn" aria-label="Toggle favorite">
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+
+      <div class="timebar">
+        <span id="current_time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="progress_div" id="progress_div" aria-label="Seek">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <div class="controls">
+        <button id="shuffle" class="pill" title="Shuffle">
+          <i class="fa-solid fa-shuffle"></i>
+        </button>
+        <button id="prev" class="circle" title="Previous">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button id="play" class="circle main" title="Play/Pause">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="next" class="circle" title="Next">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+        <button id="repeat" class="pill" title="Repeat">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </div>
+
+      <div class="volume">
+        <button id="mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume" />
+      </div>
+
+      <!-- <footer class="hints">
+        <span><kbd>Space</kbd> play/pause</span>
+        <span><kbd>←/→</kbd> seek 5s</span>
+        <span><kbd>↑/↓</kbd> volume</span>
+      </footer> -->
+    </section>
+
+    <!-- Playlist -->
+    <aside class="playlist">
+      <div class="list-header">
+        <h4>Playlist</h4>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input id="search" placeholder="Search songs or artists" />
+        </div>
+      </div>
+      <ul id="trackList" class="tracks" aria-label="Tracks"></ul>
+    </aside>
+  </main>
+
+  <!-- Template for playlist items -->
+  <template id="trackItemTpl">
+    <li class="track" data-index>
+      <img class="thumb" src="" alt="" />
+      <div class="info">
+        <p class="t"></p>
+        <p class="a"></p>
+      </div>
+      <button class="like" title="Favorite">
+        <i class="fa-solid fa-heart"></i>
+      </button>
+      <span class="badge playing" title="Now playing">
+        <i class="fa-solid fa-waveform-lines"></i>
+      </span>
+    </li>
+  </template>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
